@@ -1,0 +1,11 @@
+// @import "./theme.scss";
+@import "~taro-ui/dist/style/index.scss";
+.page {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+view {
+  box-sizing: border-box;
+}
