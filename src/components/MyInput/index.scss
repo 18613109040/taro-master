@@ -1,0 +1,18 @@
+.my-input{
+  .header{
+    display: flex;
+    align-items: center;
+    .title{
+      font-size: 20px;
+    }
+    .arrow-up{
+      margin-left: 20px;
+    }
+    .arrow-down{
+      margin-left: 20px;
+    }
+    .close-circle{
+      margin-left: 30px;
+    }
+  }
+}

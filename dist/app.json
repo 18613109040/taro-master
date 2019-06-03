@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/template/index",
+    "pages/home/index",
+    "pages/products/index",
+    "pages/account/index",
+    "pages/detail/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Taro Demo",
+    "navigationBarTextStyle": "black"
+  }
+}

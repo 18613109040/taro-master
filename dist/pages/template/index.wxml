@@ -1,0 +1,31 @@
+<block>
+    <view class="template">
+        <view class="sub-title"><text class="man-title">创建主题</text>
+        </view>
+        <at-input title="主题" __triggerObserer="{{ _triggerObserer }}" type="text" placeholder="请输入您的标题信息(必填)" value="{{title}}" bindonchange="handleChange" __fn_onChange="{{true}}" data-e-onchange-so="this"></at-input>
+        <view class="container"><text class="title">内容</text>
+            <at-textarea className="textarea" __triggerObserer="{{ _triggerObserer }}" value="{{content}}" bindonchange="handleChange" title="内容" placeholder="为主题添加详细的描述" __fn_onChange="{{true}}" data-e-onchange-so="this"></at-textarea>
+        </view>
+        <at-image-picker multiple="{{true}}" __triggerObserer="{{ _triggerObserer }}" length="{{4}}" count="{{8}}" showAddBtn="{{anonymousState__temp}}" files="{{contentImgs}}" bindonchange="onChangeImagePicker" bindonfail="onFailImagePicker" bindonimageclick="onImageClick" __fn_onChange="{{true}}" __fn_onFail="{{true}}" __fn_onImageClick="{{true}}"></at-image-picker>
+        <view class="create-page">
+            <view class="panel">
+                <cus-tom wx:key="$loopState__temp3" __triggerObserer="{{ _triggerObserer }}" bindonclickup="onClickUp" bindonclickdown="onClickDown" bindonclickclose="onClickClose" data="{{item.$loopState__temp5}}" wx:for="{{loopArray0}}" wx:for-item="item" wx:for-index="index" __fn_onClickUp="{{true}}" __fn_onClickDown="{{true}}" __fn_onClickClose="{{true}}">
+                    <block>
+                        <block wx:if="{{item.$original.formType === 'Pay'}}">
+                            <pay data="{{item.$original}}" __triggerObserer="{{ _triggerObserer }}" bindonchangevalue="onChangeValue" bindonchangepayimagepicker="onChangePayImagePicker" __fn_onChangeValue="{{true}}" __fn_onChangePayImagePicker="{{true}}"></pay>
+                        </block>
+                        <block wx:else>
+                            <block wx:if="{{item.$original.formType === 'ApplyBtn'}}">
+                                <apply-btn data="{{item.$original}}" __triggerObserer="{{ _triggerObserer }}" bindonchangevalue="onChangeValue" __fn_onChangeValue="{{true}}"></apply-btn>
+                            </block>
+                        </block>
+                    </block>
+                </cus-tom>
+            </view>
+        </view>
+        <view class="at-row at-row--wrap">
+            <view class="at-col" bindtap="anonymousFunc0" wx:key="$loopState__temp7" wx:for="{{loopArray1}}" wx:for-item="item" wx:for-index="index" data-e-tap-so="this" data-e-tap-a-a="{{index}}"><text>{{item.$original.title}}</text>
+            </view>
+        </view>
+    </view>
+</block>

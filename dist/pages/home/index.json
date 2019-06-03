@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "at-grid": "../../npm/taro-ui/dist/weapp/components/grid/index",
+    "at-tabs": "../../npm/taro-ui/dist/weapp/components/tabs/index",
+    "at-avatar": "../../npm/taro-ui/dist/weapp/components/avatar/index"
+  },
+  "navigationBarTitleText": "首页"
+}

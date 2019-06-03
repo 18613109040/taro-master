@@ -1,0 +1,19 @@
+<block>
+    <view>
+        <block>
+            <block wx:if="{{preview}}">
+                <view class="footer-btn">
+                    <view class="footer-left"></view>
+                    <view class="btn">{{buttonText}}</view>
+                </view>
+            </block>
+            <block wx:else>
+                <view>
+                    <at-input title="参与人数" __triggerObserer="{{ _triggerObserer }}" type="number" placeholder="请输入参与人数上限" value="{{count}}" bindonchange="anonymousFunc0" __fn_onChange="{{true}}"></at-input>
+                    <at-input title="每人次数" __triggerObserer="{{ _triggerObserer }}" type="number" placeholder="默认次数为1" value="{{perUser}}" bindonchange="anonymousFunc1" __fn_onChange="{{true}}"></at-input>
+                    <at-input title="参与按钮" __triggerObserer="{{ _triggerObserer }}" type="number" placeholder="请输入参与按钮名称" value="{{buttonText}}" bindonchange="anonymousFunc2" __fn_onChange="{{true}}"></at-input>
+                </view>
+            </block>
+        </block>
+    </view>
+</block>

@@ -1,0 +1,39 @@
+<block>
+    <view class="home-page">
+        <view><text class="man-title">选择模板</text>
+        </view>
+        <view><text class="sub-title">请从下方选择模板创建一个主题</text>
+        </view>
+        <at-grid className="home-grid" __triggerObserer="{{ _triggerObserer }}" columnNum="{{4}}" hasBorder="{{false}}" data="{{anonymousState__temp}}"></at-grid>
+        <view class="mo-ban" bindtap="toTemplate">
+            <view class="redios"></view>
+            <view class="content">
+                <view><text class="title">自定义模板</text>
+                </view>
+                <view><text class="sub">使用自定义模板创建主题</text>
+                </view>
+            </view>
+            <view class="btn"><text>马上开始</text>
+            </view>
+        </view>
+        <view class="list">
+            <view class="title"><text>我的主题</text>
+            </view>
+            <view class="tabs">
+                <at-tabs current="{{current}}" __triggerObserer="{{ _triggerObserer }}" tabList="{{anonymousState__temp2}}"></at-tabs>
+            </view>
+        </view>
+        <view class="tab-panel"><text class="title">珠江新城租车</text>
+            <view><text class="des">外交部驻香港特区特派员公署负责人24日紧急约见德国驻香港代理总领事施密特施密特...</text>
+            </view>
+            <view>
+                <view class="avatar-row">
+                    <at-avatar className="avatar-image" __triggerObserer="{{ _triggerObserer }}" circle="{{true}}" image=""></at-avatar>
+                    <at-avatar className="avatar-image" __triggerObserer="{{ _triggerObserer }}" circle="{{true}}" image=""></at-avatar>
+                    <at-avatar className="avatar-image" __triggerObserer="{{ _triggerObserer }}" circle="{{true}}" image=""></at-avatar>
+                </view>
+                <view></view>
+            </view>
+        </view>
+    </view>
+</block>

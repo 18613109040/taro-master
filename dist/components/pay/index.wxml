@@ -1,0 +1,21 @@
+<block>
+    <view>
+        <block>
+            <block wx:if="{{preview}}">
+                <view class="preview"><text class="title">{{title}}</text>
+                    <view class="pay-image">
+                        <image class="image" src="payImg"></image><text class="description">{{description}}</text>
+                    </view>
+                </view>
+            </block>
+            <block wx:else>
+                <view class="pay">
+                    <at-input title="输入框" __triggerObserer="{{ _triggerObserer }}" type="text" value="{{description}}" placeholder="测试输入框" bindonchange="handleChange" __fn_onChange="{{true}}"></at-input>
+                    <view class="container"><text class="title">上传图片</text>
+                        <at-image-picker className="textarea" __triggerObserer="{{ _triggerObserer }}" showAddBtn="{{anonymousState__temp}}" files="{{files}}" bindonchange="changePayImagePicker" __fn_onChange="{{true}}"></at-image-picker>
+                    </view>
+                </view>
+            </block>
+        </block>
+    </view>
+</block>

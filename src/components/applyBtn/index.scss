@@ -1,0 +1,18 @@
+.footer-btn{
+  position: fixed;
+  height: 96px;
+  width: 750px;
+  display: flex;
+  bottom: 0px;
+  left: 0px;
+  align-items: center;
+  .footer-left{
+    flex: 1;
+  }
+  .btn{
+    background: #4182F3;
+    border-radius: 0 12px 12px 0;
+    width: 250px;
+    height: 96px;
+  }
+}

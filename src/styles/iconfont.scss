@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1215150_2m25nh87yum.eot');
+  src: url('//at.alicdn.com/t/font_1215150_2m25nh87yum.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1215150_2m25nh87yum.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1215150_2m25nh87yum.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1215150_2m25nh87yum.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1215150_2m25nh87yum.svg#iconfont') format('svg');
+}
+.iconfont{ font-family:"iconfont" !important; font-size:16px; font-style:normal; -webkit-font-smoothing: antialiased;  -moz-osx-font-smoothing: grayscale;}
+
+.icon-up::after {
+  content: "\e74b";
+  color: aqua;
+}

@@ -1,0 +1,23 @@
+.cus-tom{
+  background: #fff;
+  margin-bottom: 20px;
+  .header{
+    display: flex;
+    align-items: center;
+    background: #ddd;
+    .title{
+      font-family: PingFangSC-Medium;
+      font-size: 40px;
+      color: #181C28;
+    }
+    .arrow-up{
+      margin-left: 20px;
+    }
+    .arrow-down{
+      margin-left: 20px;
+    }
+    .close-circle{
+      margin-left: 30px;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+
+.template{
+  padding: 32px;
+  .at-input{
+    margin-left: 0px;
+  }
+  .title{
+    position: absolute;
+    font-family: PingFangSC-Regular;
+    font-size: 32px;
+    color: #181C28;
+    padding-top: 12px;
+    width: 140px;
+  }
+  .textarea{
+    padding-left: 140px;
+    border: none;
+  }
+  .at-input__title{
+    width: 140px;
+  }
+
+  .at-input{
+    margin-left: 0px;
+  }
+  .sub-title{
+    margin-bottom: 32px;
+    .man-title{
+      font-family: PingFangSC-Medium;
+      font-size: 40px;
+      color: #181C28;
+    }
+  }
+}
+
+.create-page{
+  background: #f5f5f5;
+  .panel{
+    margin-bottom: 100px;
+
+  }
+}
+.footer{
+  display: flex;
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  bottom: 0px;
+  color: #ffffff;
+  background: #4283F4;
+  align-items: center;
+  .btn{
+    flex: 1;
+    text-align: center;
+  }
+}

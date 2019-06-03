@@ -1,0 +1,5 @@
+<block>
+    <view class="my-input">
+        <at-textarea value="{{value}}" __triggerObserer="{{ _triggerObserer }}" bindonchange="handleChange" placeholder="请输入文字类容" __fn_onChange="{{true}}"></at-textarea>
+    </view>
+</block>

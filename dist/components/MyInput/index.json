@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "at-textarea": "../../npm/taro-ui/dist/weapp/components/textarea/index"
+  }
+}

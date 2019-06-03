@@ -7,7 +7,7 @@ import './index.scss';
 @connect(({}) => ({
 
 }))
-class Index extends Component {
+class Detail extends Component {
   config = {
     navigationBarTitleText: '详情',
   };
@@ -28,18 +28,10 @@ class Index extends Component {
   }
   render() {
     return (
-      <View className="home-page">
-      <AtNavBar
-        color='#000'
-        title='NavBar 导航栏示例'
-        leftText='返回'
-        rightFirstIconType='bullet-list'
-        rightSecondIconType='user'
-      />
-       <Text >详情</Text>
+      <View className="detail">
       </View>
     );
   }
 }
 
-export default Index;
+export default Detail;

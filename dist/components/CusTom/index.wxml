@@ -1,0 +1,18 @@
+<block>
+    <view class="cus-tom">
+        <view class="header"><text class="title">{{data.title}}</text>
+            <block wx:if="{{!(data.index == 0)}}">
+                <view class="arrow-up" bindtap="handleUp">
+                    <at-icon value="arrow-up" __triggerObserer="{{ _triggerObserer }}" size="15"></at-icon>
+                </view>
+            </block>
+            <view class="arrow-down" bindtap="handleDown">
+                <at-icon value="arrow-down" __triggerObserer="{{ _triggerObserer }}" size="15"></at-icon>
+            </view>
+            <view class="close-circle" bindtap="handleClose">
+                <at-icon value="close-circle" __triggerObserer="{{ _triggerObserer }}" size="15"></at-icon>
+            </view>
+        </view>
+        <slot></slot>
+    </view>
+</block>

@@ -1,4 +1,5 @@
 .home-page {
+  padding: 64px 32px 32px 32px;
   .home-swiper{
     display: flex;
     justify-content: center;
@@ -8,5 +9,110 @@
     width: 686px;
     height: 250px;
     border-radius: 10px;
+  }
+  .man-title{
+    font-family: PingFangSC-Medium;
+    font-size: 48px;
+    color: #181C28;
+  }
+  .sub-title{
+    font-family: PingFangSC-Regular;
+    font-size: 26px;
+    color: #B2B4BE;
+  }
+  .home-grid{
+    margin-top: 48px;
+  }
+  .mo-ban{
+    margin-top: 48px;
+    background: #F6F8FF;
+    border: 1px solid #E4EAFF;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    padding-top: 33px;
+    padding-bottom: 33px;
+    .content{
+      flex: 1;
+    }
+    .redios{
+      background: #B9CBFD;
+      border-radius: 100%;
+      height: 24px;
+      width: 24px;
+      margin-left: 62px;
+      margin-right: 40px;
+    }
+    .title{
+      font-family: PingFangSC-Medium;
+      font-size: 36px;
+      color: #181C28;
+    }
+    .btn{
+      flex-basis: 168px;
+      width: 168px;
+      height: 56px;
+      background-image: linear-gradient(-135deg, #85A7FF 0%, #6A87FF 100%);
+      border-radius: 100px 4px 4px 100px;
+      font-family: PingFangSC-Regular;
+      font-size: 28px;
+      color: #FFFFFF;
+      line-height: 56px;
+      text-align: center;
+    }
+    .sub{
+      font-family: PingFangSC-Regular;
+      font-size: 26px;
+      color: #B2B4BE;
+    }
+  }
+  .list{
+    display: flex;
+    align-items: center;
+    margin-top: 120px;
+    .title{
+      flex: 1;
+      font-family: PingFangSC-Medium;
+      font-size: 48px;
+      color: #181C28;
+    }
+    .tabs{
+      flex-basis: 300px;
+    }
+  }
+  .tab-panel{
+    background: #FFF6F6;
+    border: 1px solid #FFE1E1;
+    border-radius: 16px;
+    margin-top: 40px;
+    padding: 32px;
+    .title{
+      font-family: PingFangSC-Medium;
+      font-size: 36px;
+      color: #181C28;
+    }
+    .des{
+      font-family: PingFangSC-Regular;
+      font-size: 26px;
+      color: #7F8593;
+      text-align: justify;
+      line-height: 26px;
+    }
+    .avatar-row{
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+    }
+    .avatar-image{
+      width: 48px;
+      height: 48px;
+      margin-right: -10px;
+    }
+  }
+  .at-tabs__item-underline{
+    left: calc( 50% - 16px );
+    width: 32px;
+    height: 8px;
+    border-radius: 8px;
   }
 }

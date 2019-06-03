@@ -1,0 +1,10 @@
+<block>
+    <view>{{preview}}
+        <view class="my-input">
+            <at-input name="value" __triggerObserer="{{ _triggerObserer }}" title="输入框" type="text" value="{{value}}" placeholder="测试输入框" bindonchange="handleChange" __fn_onChange="{{true}}"></at-input>
+            <view class="container"><text class="title">上传图片</text>
+                <at-image-picker className="textarea" __triggerObserer="{{ _triggerObserer }}" showAddBtn="{{anonymousState__temp}}" files="{{files}}" bindonchange="onChangeImagePicker" bindonfail="onFailImagePicker" bindonimageclick="onImageClick" __fn_onChange="{{true}}" __fn_onFail="{{true}}" __fn_onImageClick="{{true}}"></at-image-picker>
+            </view>
+        </view>
+    </view>
+</block>
