@@ -21,8 +21,15 @@ export default {
       title: '单项选择',
       formType: 'radio',
       formIndex: 3,
-      title: '',
-      option:[]
+      name: '',
+      options:[
+        {
+          value: ''
+        },
+        {
+          value: ''
+        }
+      ]
     }],
     actionBar:[{
       title: '组件一',

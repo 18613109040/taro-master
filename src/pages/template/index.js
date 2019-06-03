@@ -5,7 +5,8 @@ import { connect } from '@tarojs/redux';
 import Pay from  '../../components/pay';
 import CusTom from '../../components/CusTom';
 import ApplyBtn from '../../components/applyBtn'
-import Radio from '../../components/radio'
+import CusRadio from '../../components/radio'
+
 import './index.scss';
 
 @connect(({loading, template }) => ({
@@ -155,7 +156,7 @@ class CustomTemplate extends Component {
                       <ApplyBtn
                         data={item}
                         onChangeValue={this.onChangeValue}
-                      />: item.formType==='radio'? <Radio />:''
+                      />: item.formType==='radio'? <CusRadio  data={item}/>:''
                     }
                   </CusTom>
                   )
