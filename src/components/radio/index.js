@@ -14,8 +14,8 @@ class Radio extends Component {
 
   static defaultProps = {
     data: {
-      title: '',
-      option: []
+      name: '',
+      options: []
     },
     preview:false
   };
@@ -33,7 +33,7 @@ class Radio extends Component {
   }
   render() {
     const { preview } = this.props;
-    const { option, title } = this.props.data;
+    const { options, name } = this.props.data;
     const { values } = this.state;
     return (
       <View className='redio'>
@@ -46,17 +46,17 @@ class Radio extends Component {
               <AtInput
                 title="标题"
                 type="text"
-                value={title}
+                value={name}
                 placeholder="请输入单选标题"
                 onChange={this.handleChange}
               />
               {
-                option.map((item, index) => (
+                options.map((item, index) => (
                   <AtInput
                     key={`option_${index}`}
                     title={`选项${values[index]}`}
                     type="text"
-                    value={title}
+                    value={item.value}
                     placeholder="请输入选项内容"
                     onChange={this.handleChange}
                   />
