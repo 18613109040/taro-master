@@ -9,23 +9,43 @@
         <at-image-picker multiple="{{true}}" __triggerObserer="{{ _triggerObserer }}" length="{{4}}" count="{{8}}" showAddBtn="{{anonymousState__temp}}" files="{{contentImgs}}" bindonchange="onChangeImagePicker" bindonfail="onFailImagePicker" bindonimageclick="onImageClick" __fn_onChange="{{true}}" __fn_onFail="{{true}}" __fn_onImageClick="{{true}}"></at-image-picker>
         <view class="create-page">
             <view class="panel">
-                <cus-tom wx:key="$loopState__temp3" __triggerObserer="{{ _triggerObserer }}" bindonclickup="onClickUp" bindonclickdown="onClickDown" bindonclickclose="onClickClose" data="{{item.$loopState__temp5}}" wx:for="{{loopArray0}}" wx:for-item="item" wx:for-index="index" __fn_onClickUp="{{true}}" __fn_onClickDown="{{true}}" __fn_onClickClose="{{true}}">
+                <cus-tom wx:key="$loopState__temp3" __triggerObserer="{{ _triggerObserer }}" bindonclickup="onClickUp" bindonclickdown="onClickDown" bindonclickclose="onClickClose" length="{{layouts.length}}" data="{{item.$loopState__temp5}}" wx:for="{{loopArray0}}" wx:for-item="item" wx:for-index="index" __fn_onClickUp="{{true}}" __fn_onClickDown="{{true}}" __fn_onClickClose="{{true}}">
                     <block>
                         <block wx:if="{{item.$original.formType === 'Pay'}}">
                             <pay data="{{item.$original}}" __triggerObserer="{{ _triggerObserer }}" bindonchangevalue="onChangeValue" bindonchangepayimagepicker="onChangePayImagePicker" __fn_onChangeValue="{{true}}" __fn_onChangePayImagePicker="{{true}}"></pay>
                         </block>
                         <block wx:else>
-                            <block wx:if="{{item.$original.formType === 'ApplyBtn'}}">
-                                <apply-btn data="{{item.$original}}" __triggerObserer="{{ _triggerObserer }}" bindonchangevalue="onChangeValue" __fn_onChangeValue="{{true}}"></apply-btn>
+                            <block>
+                                <block wx:if="{{item.$original.formType === 'ApplyBtn'}}">
+                                    <apply-btn data="{{item.$original}}" __triggerObserer="{{ _triggerObserer }}" bindonchangevalue="onChangeValue" __fn_onChangeValue="{{true}}"></apply-btn>
+                                </block>
+                                <block wx:else>
+                                    <block>
+                                        <block wx:if="{{item.$original.formType === 'radio'}}">
+                                            <cus-radio data="{{item.$original}}" __triggerObserer="{{ _triggerObserer }}" bindonchangevalue="onChangeValue" __fn_onChangeValue="{{true}}"></cus-radio>
+                                        </block>
+                                        <block wx:else>
+                                            <block>
+                                                <block wx:if="{{item.$original.formType === 'checkBox'}}">
+                                                    <cus-check-radio data="{{item.$original}}" __triggerObserer="{{ _triggerObserer }}" bindonchangevalue="onChangeValue" __fn_onChangeValue="{{true}}"></cus-check-radio>
+                                                </block>
+                                                <block wx:else>
+                                                    <block wx:if="{{item.$original.formType === 'textBox'}}">
+                                                        <text-box data="{{item.$original}}" __triggerObserer="{{ _triggerObserer }}" bindonchangevalue="onChangeValue" __fn_onChangeValue="{{true}}"></text-box>
+                                                    </block>
+                                                </block>
+                                            </block>
+                                        </block>
+                                    </block>
+                                </block>
                             </block>
                         </block>
                     </block>
                 </cus-tom>
             </view>
         </view>
-        <view class="at-row at-row--wrap">
-            <view class="at-col" bindtap="anonymousFunc0" wx:key="$loopState__temp7" wx:for="{{loopArray1}}" wx:for-item="item" wx:for-index="index" data-e-tap-so="this" data-e-tap-a-a="{{index}}"><text>{{item.$original.title}}</text>
-            </view>
+        <view class="option">
+            <at-grid columnNum="{{4}}" __triggerObserer="{{ _triggerObserer }}" hasBorder="{{false}}" data="{{actionBar}}" bindonclick="addCompent" __fn_onClick="{{true}}"></at-grid>
         </view>
     </view>
 </block>

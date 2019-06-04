@@ -4,51 +4,124 @@ export default {
     title: '',
     content: '',
     contentImgs:[],
-    layouts:[{
-      title: '付费信息',
-      formType: 'Pay',
-      formIndex: 1,
-      description: '',
-      payImg: ''
-    },{
-      title: '参与申请',
-      formType: 'ApplyBtn',
-      formIndex: 2,
-      count: '',
-      perUser: '',
-      buttonText: ''
-    },{
-      title: '单项选择',
-      formType: 'radio',
-      formIndex: 3,
-      name: '',
-      options:[
-        {
-          value: ''
-        },
-        {
-          value: ''
-        }
-      ]
-    }],
+    layouts:[
+      // {
+      //   title: '付费信息',
+      //   formType: 'Pay',
+      //   formIndex: 0,
+      //   description: '',
+      //   payImg: ''
+      // },{
+      //   title: '参与申请',
+      //   formType: 'ApplyBtn',
+      //   formIndex: 1,
+      //   count: '',
+      //   perUser: '',
+      //   buttonText: ''
+      // },{
+      //   title: '单项选择',
+      //   formType: 'radio',
+      //   formIndex: 2,
+      //   name: '',
+      //   options:[
+      //     {
+      //       value: ''
+      //     },
+      //     {
+      //       value: ''
+      //     }
+      //   ]
+      // },{
+      //   title: '多项选择',
+      //   formType: 'checkBox',
+      //   formIndex: 3,
+      //   name: '',
+      //   options:[
+      //     {
+      //       value: ''
+      //     },
+      //     {
+      //       value: ''
+      //     }
+      //   ]
+      // },
+      // {
+      //   title: '输入框',
+      //   formType: 'textBox',
+      //   formIndex: 4,
+      //   name: '',
+      //   description: ''
+      // }
+    ],
     actionBar:[{
-      title: '组件一',
-      src: '',
+      image: '',
+      value: '参与申请',
+      formType: 'ApplyBtn',
+      data:{
+        title: '参与申请',
+        formType: 'ApplyBtn',
+        count: '',
+        perUser: '',
+        buttonText: ''
+      }
+    },{
+      image: '',
+      value: '付费相关',
       formType: 'Pay',
-      description: '',
-      payImg: ''
+      data:{
+        title: '付费信息',
+        formType: 'Pay',
+        description: '',
+        payImg: ''
+      }
     },{
-      title: '组件二',
-      src: ''
+      image: '',
+      value: '输入框',
+      formType: 'textBox',
+      data:{
+        title: '输入框',
+        formType: 'textBox',
+        name: '',
+        description: ''
+      }
     },{
-      title: '组件三',
-      src: ''
+      image: '',
+      value: '单项选择',
+      formType: 'radio',
+      data:{
+        title: '单项选择',
+        formType: 'radio',
+        name: '',
+        options:[
+          {
+            value: ''
+          },
+          {
+            value: ''
+          }
+        ]
+      }
     },{
-      title: '组件四',
-      src: ''
+      image: '',
+      value: '多项选择',
+      formType: 'checkBox',
+      data:{
+        title: '多项选择',
+        formType: 'checkBox',
+        name: '',
+        options:[
+          {
+            value: ''
+          },
+          {
+            value: ''
+          }
+        ]
+      }
     },{
-      title: '组件五',
-      src: ''
+      image: '',
+      value: '定位相关',
+      formType: '',
     }]
   },
   effects: {

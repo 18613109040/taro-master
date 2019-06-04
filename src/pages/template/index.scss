@@ -31,6 +31,21 @@
       color: #181C28;
     }
   }
+  .option{
+    position: fixed;
+    bottom: 200px;
+    width: 686px;
+    left: 32px;
+  }
+  .at-grid{
+    background-image: linear-gradient(-135deg, #484B5B, #2C2D35);
+    border-radius: 16px;
+    .content-inner__text{
+      font-family: PingFangSC-Regular;
+      font-size: 24px;
+      color: #C7CAD4;
+    }
+  }
 }
 
 .create-page{

@@ -1,11 +1,13 @@
 import Taro, { Component } from '@tarojs/taro';
 import { View, Text } from '@tarojs/components';
-import { AtInput, AtTextarea, AtImagePicker } from 'taro-ui'
+import { AtInput, AtTextarea, AtImagePicker, AtGrid } from 'taro-ui'
 import { connect } from '@tarojs/redux';
 import Pay from  '../../components/pay';
 import CusTom from '../../components/CusTom';
 import ApplyBtn from '../../components/applyBtn'
 import CusRadio from '../../components/radio'
+import CusCheckRadio from '../../components/checkBox'
+import TextBox from '../../components/textBox'
 
 import './index.scss';
 
@@ -96,12 +98,11 @@ class CustomTemplate extends Component {
     const { dispatch } = this.props;
     dispatch({
       type: 'template/addLayout',
-      payload: item
+      payload: item.data
     })
   }
   render() {
     const { layouts, actionBar, title, content, contentImgs } = this.props;
-    console.dir(contentImgs)
     return (
       <View className="template">
         <View className="sub-title">
@@ -144,6 +145,7 @@ class CustomTemplate extends Component {
                     onClickUp={this.onClickUp}
                     onClickDown={this.onClickDown}
                     onClickClose={this.onClickClose}
+                    length={layouts.length}
                     data={Object.assign(item,{current: index})}
                   >
                     {
@@ -156,7 +158,19 @@ class CustomTemplate extends Component {
                       <ApplyBtn
                         data={item}
                         onChangeValue={this.onChangeValue}
-                      />: item.formType==='radio'? <CusRadio  data={item}/>:''
+                      />: item.formType==='radio'? 
+                      <CusRadio 
+                      data={item}
+                      onChangeValue={this.onChangeValue}
+                      />:item.formType==='checkBox'? 
+                      <CusCheckRadio
+                        data={item}
+                        onChangeValue={this.onChangeValue}
+                      />:item.formType==='textBox'? 
+                      <TextBox
+                        data={item}
+                        onChangeValue={this.onChangeValue}
+                      />:''
                     }
                   </CusTom>
                   )
@@ -164,15 +178,15 @@ class CustomTemplate extends Component {
             }
           </View>
         </View>
-        <View className='at-row at-row--wrap'>
-          {
-            actionBar.map((item,index)=>(
-              <View className='at-col' onClick={()=>{this.addCompent(item)}} key={`bar_${index}`}>
-                <Text>{item.title}</Text>
-              </View>
-            ))
-          }
+        <View className='option'>
+          <AtGrid 
+            columnNum={4}
+            hasBorder={false}
+            data={actionBar}
+            onClick={this.addCompent}
+          />
         </View>
+        
         {/* <View className="footer">
           <Text className="btn">预览</Text>
           <View></View>

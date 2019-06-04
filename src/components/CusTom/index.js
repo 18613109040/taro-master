@@ -10,10 +10,12 @@ class CusTom extends Component {
     onClickDown: PropTypes.func,
     onClickClose: PropTypes.func,
     data: PropTypes.object,
+    length:PropTypes.number
   };
 
   static defaultProps = {
     data: {},
+    length: 0
   };
   constructor () {
     super(...arguments)
@@ -40,20 +42,24 @@ class CusTom extends Component {
     }
   }
   render(){
-    const { data } = this.props;
+    const { data, length } = this.props;
     return (
       <View className="cus-tom">
         <View className='header'>
           <Text className='title'>{data.title}</Text>
           {
-            data.index== 0 ? '': (
+            data.formIndex== 0 ? '': (
             <View className='arrow-up' onClick={this.handleUp}>
               <AtIcon value='arrow-up' size='15'  />
             </View>)
           }
-          <View className='arrow-down'  onClick={this.handleDown}>
-            <AtIcon value='arrow-down' size='15' />
-          </View>
+          {
+            data.formIndex == length-1?'':(
+            <View className='arrow-down'  onClick={this.handleDown}>
+              <AtIcon value='arrow-down' size='15' />
+            </View>
+            )
+          }
           <View className='close-circle'  onClick={this.handleClose} >
             <AtIcon value='close-circle' size='15' />
           </View>

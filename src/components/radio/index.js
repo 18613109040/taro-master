@@ -1,13 +1,12 @@
 import Taro, { Component } from "@tarojs/taro";
-import { View, Text, Image } from "@tarojs/components";
-import { AtInput, AtImagePicker } from "taro-ui";
+import { View, Text } from "@tarojs/components";
+import { AtInput } from "taro-ui";
 import PropTypes from "prop-types";
 import "./index.scss";
 
-class Radio extends Component {
+class CusRadio extends Component {
   static propTypes = {
     onChangeValue: PropTypes.func,
-    onChangePayImagePicker: PropTypes.func,
     data: PropTypes.object,
     preview: PropTypes.bool
   };
@@ -25,10 +24,16 @@ class Radio extends Component {
       values: ['一','二','三','四','五','六','七','八','九']
     }
   }
-  handleChange = value => {
+  handleChange = (type, value, index) => {
     if (this.props.onChangeValue) {
       const { data } = this.props;
-      this.props.onChangeValue(Object.assign(data,{description: value}));
+      if(type === 'name'){
+        data[type] = value
+        this.props.onChangeValue({...data});
+      }else{
+        data[type][index].value = value
+        this.props.onChangeValue({...data});
+      }
     }
   }
   render() {
@@ -48,7 +53,7 @@ class Radio extends Component {
                 type="text"
                 value={name}
                 placeholder="请输入单选标题"
-                onChange={this.handleChange}
+                onChange={(value)=>this.handleChange('name',value)}
               />
               {
                 options.map((item, index) => (
@@ -58,7 +63,7 @@ class Radio extends Component {
                     type="text"
                     value={item.value}
                     placeholder="请输入选项内容"
-                    onChange={this.handleChange}
+                    onChange={(value)=>this.handleChange('options',value, index)}
                   />
                 ))
               }
@@ -70,4 +75,4 @@ class Radio extends Component {
   }
 }
 
-export default Radio;
+export default CusRadio;

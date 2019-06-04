@@ -38,7 +38,7 @@ var CusTom = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = CusTom.__proto__ || Object.getPrototypeOf(CusTom)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["data", "children"], _this.handleUp = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = CusTom.__proto__ || Object.getPrototypeOf(CusTom)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["data", "length", "children"], _this.handleUp = function () {
       if (_this.props.onClickUp) {
         var data = _this.props.data;
 
@@ -73,10 +73,13 @@ var CusTom = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       ;
 
-      var data = this.__props.data;
+      var _props = this.__props,
+          data = _props.data,
+          length = _props.length;
 
       Object.assign(this.__state, {
-        data: data
+        data: data,
+        length: length
       });
       return this.__state;
     }
@@ -113,6 +116,10 @@ CusTom.properties = {
   "__fn_onClickClose": {
     "type": null,
     "value": null
+  },
+  "length": {
+    "type": null,
+    "value": null
   }
 };
 CusTom.$$events = ["handleUp", "handleDown", "handleClose"];
@@ -120,10 +127,12 @@ CusTom.propTypes = {
   onClickUp: _index4.default.func,
   onClickDown: _index4.default.func,
   onClickClose: _index4.default.func,
-  data: _index4.default.object
+  data: _index4.default.object,
+  length: _index4.default.number
 };
 CusTom.defaultProps = {
-  data: {}
+  data: {},
+  length: 0
 };
 exports.default = CusTom;
 

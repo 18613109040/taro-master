@@ -49,7 +49,7 @@ var CustomTemplate = (_dec = (0, _index3.connect)(function (_ref) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref2 = CustomTemplate.__proto__ || Object.getPrototypeOf(CustomTemplate)).call.apply(_ref2, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "loopArray0", "loopArray1", "title", "content", "contentImgs", "layouts", "actionBar", "value", "files", "dispatch"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref2 = CustomTemplate.__proto__ || Object.getPrototypeOf(CustomTemplate)).call.apply(_ref2, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "loopArray0", "title", "content", "contentImgs", "layouts", "actionBar", "value", "files", "dispatch"], _this.config = {
       navigationBarTitleText: '自定义'
     }, _this.componentDidMount = function () {}, _this.handleChange = function (value) {
       console.dir(value);
@@ -100,9 +100,9 @@ var CustomTemplate = (_dec = (0, _index3.connect)(function (_ref) {
 
       dispatch({
         type: 'template/addLayout',
-        payload: item
+        payload: item.data
       });
-    }, _this.anonymousFunc0Array = [], _this.$$refs = [], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.$$refs = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(CustomTemplate, [{
@@ -129,8 +129,6 @@ var CustomTemplate = (_dec = (0, _index3.connect)(function (_ref) {
   }, {
     key: "_createData",
     value: function _createData() {
-      var _this2 = this;
-
       this.__state = arguments[0] || this.state || {};
       this.__props = arguments[1] || this.props || {};
       var __isRunloopRef = arguments[2];
@@ -143,7 +141,6 @@ var CustomTemplate = (_dec = (0, _index3.connect)(function (_ref) {
           content = _props.content,
           contentImgs = _props.contentImgs;
 
-      console.dir(contentImgs);
       var anonymousState__temp = contentImgs.length < 8;
       var loopArray0 = layouts.map(function (item, index) {
         item = {
@@ -157,25 +154,9 @@ var CustomTemplate = (_dec = (0, _index3.connect)(function (_ref) {
           $original: item.$original
         };
       });
-      var loopArray1 = actionBar.map(function (item, index) {
-        item = {
-          $original: (0, _index.internal_get_original)(item)
-        };
-
-        _this2.anonymousFunc0Array[index] = function () {
-          _this2.addCompent(item.$original);
-        };
-
-        var $loopState__temp7 = "bar_" + index;
-        return {
-          $loopState__temp7: $loopState__temp7,
-          $original: item.$original
-        };
-      });
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
         loopArray0: loopArray0,
-        loopArray1: loopArray1,
         title: title,
         content: content,
         contentImgs: contentImgs,
@@ -183,12 +164,6 @@ var CustomTemplate = (_dec = (0, _index3.connect)(function (_ref) {
         actionBar: actionBar
       });
       return this.__state;
-    }
-  }, {
-    key: "anonymousFunc0",
-    value: function anonymousFunc0(index, e) {
-      ;
-      this.anonymousFunc0Array[index] && this.anonymousFunc0Array[index](e);
     }
   }]);
 
@@ -220,7 +195,7 @@ CustomTemplate.properties = {
     "value": null
   }
 };
-CustomTemplate.$$events = ["handleChange", "onChangeImagePicker", "onFailImagePicker", "onImageClick", "onClickUp", "onClickDown", "onClickClose", "onChangeValue", "onChangePayImagePicker", "anonymousFunc0"];
+CustomTemplate.$$events = ["handleChange", "onChangeImagePicker", "onFailImagePicker", "onImageClick", "onClickUp", "onClickDown", "onClickClose", "onChangeValue", "onChangePayImagePicker", "addCompent"];
 exports.default = CustomTemplate;
 
 Component(require('../../npm/@tarojs/taro-weapp/index.js').default.createComponent(CustomTemplate, true));

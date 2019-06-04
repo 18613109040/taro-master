@@ -5,7 +5,11 @@
     "at-image-picker": "../../npm/taro-ui/dist/weapp/components/image-picker/index",
     "cus-tom": "../../components/CusTom/index",
     "pay": "../../components/pay/index",
-    "apply-btn": "../../components/applyBtn/index"
+    "apply-btn": "../../components/applyBtn/index",
+    "cus-radio": "../../components/radio/index",
+    "cus-check-radio": "../../components/checkBox/index",
+    "text-box": "../../components/textBox/index",
+    "at-grid": "../../npm/taro-ui/dist/weapp/components/grid/index"
   },
   "navigationBarTitleText": "自定义"
 }
